@@ -60,9 +60,8 @@ html, body{
 
 /* NOTE: Navigation */
 .c-nav{
-  padding: 20px auto;
   position: fixed;
-  top: 0;
+    top: 0;
   width: 100%;
 }
 
@@ -94,7 +93,7 @@ html, body{
 
 .c-sub-nav a{
   color: #131511;
-  padding: 0 5%;
+  padding: 0 40px;
 }
 
 .c-sub-nav a:active{
@@ -109,20 +108,21 @@ html, body{
   flex: 1;
   position: relative;
     left: 1.5%;
-  width: 95%;
+  width: 90%;
 }
 
 #site-logo img{
   min-width: 35px;
+  padding: 5px 0;
   position: relative;
     top: 2px;
     left: 1.5%;
-  width: 95%;
+  width: 70%;
 }
 
 /* NOTE: Header */
 .c-head{
-  padding: 92.5px 0 32.5px 0;
+  padding: 92.5px 10% 32.5px 10%;
 }
 .f-head--size{
   font-size: 30px;
@@ -132,6 +132,7 @@ html, body{
   line-height: 1.2;
   text-align: center;
 }
+
 #compName, h1, p{
   margin: 5px auto;
 }
@@ -157,14 +158,19 @@ html, body{
   margin: 6.75px 6.75px;
 
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
 }
 
 .c-btn-primary{
+  background-size: 100%;
   min-width: 165px;
   min-height: 255px;
-  background-size: 100%;
+}
+
+button{
+  margin: 0;
+  padding: 0;
 }
 
 #first-row button:nth-child(1){
@@ -228,9 +234,8 @@ html, body{
 .c-art{
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1024px;
-  padding: 1%;
+  max-width: 924px;
+  padding: 0 7.5%;
 }
 
 .c-art--margin{
@@ -239,6 +244,7 @@ html, body{
 
 .f-art{
   line-height: 2;
+  text-align: justify;
 }
 
 .f-art h3{
@@ -253,11 +259,11 @@ html, body{
 .c-art blockquote{
   border-left: 2px solid #968772;
   margin: 0 auto;
-  padding-left: 22.5px;
+  padding: 0 32.5px;
 }
 
 .f-art blockquote{
-  font-size: 17.5px;
+  font-size: 15.5px;
   font-style: italic;
 }
 
@@ -317,7 +323,7 @@ html, body{
 }
 
 .tr--bgcolor{
-  background: #f2d6b0;
+  background: rgba(242, 214, 176, 0.4);
 }
 
 #parallax{
@@ -368,7 +374,7 @@ html, body{
   color: #968772;
   font-family: 'Roboto', sans-serif;
   margin: 35px 0 0 0;
-  padding: 3px 0;
+  padding: 0 15px 4px 0px;
 }
 
 .f-form {
@@ -386,6 +392,7 @@ html, body{
   box-shadow: none;
   color: #968772;
   font-family: 'Roboto', sans-serif;
+  font-size: 15px;
   padding: 4px;
   margin: 35px 0 0 0;
   width: 385px;
