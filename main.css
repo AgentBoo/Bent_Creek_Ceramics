@@ -47,7 +47,10 @@ Tablet 640 - 1024px
 Phone 0-639px
  */
 
+ /* NOTE: visited and active states do not work */
+
 h1, h2, h3, h4, h5, p{
+  color: #131511;
   font-family: 'Lora', serif;
 }
 
@@ -74,7 +77,7 @@ html, body{
 }
 
 .c-sub-nav{
-  margin-right: 4.4%;
+  margin-right: 5.6%;
   padding: 20px;
 }
 
@@ -89,18 +92,15 @@ html, body{
 
   display: flex;
   justify-content: center;
+
 }
 
-.c-sub-nav a{
+.f-sub-nav--style a{
   color: #131511;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
-.c-sub-nav a:active{
-  color: #968772;
-
-}
-.c-sub-nav a:hover{
+.f-sub-nav--style a:hover{
   color: #CD5D67;
 }
 
@@ -122,7 +122,7 @@ html, body{
 
 /* NOTE: Header */
 .c-head{
-  padding: 92.5px 10% 32.5px 10%;
+  padding: 122.5px 10% 32.5px 10%;
 }
 .f-head--size{
   font-size: 30px;
@@ -141,14 +141,15 @@ html, body{
 /* NOTE: Products */
 .c-pr{
   box-sizing: border-box;
-  margin: 0 auto 12.5px auto;
-  max-width: 1124px;
+  margin: 0 auto 18.5px auto;
+  max-width: 1104px;
   padding: 0 2.5%;
 }
 
 .c-pr--row{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .s-btn{
@@ -165,7 +166,7 @@ html, body{
 .c-btn-primary{
   background-size: 100%;
   min-width: 165px;
-  min-height: 255px;
+  min-height: 288px;
 }
 
 button{
@@ -194,7 +195,7 @@ button{
   font-size: 16px;
   padding: 12.5px 10px;
   position: relative;
-    top: 87.5px;
+    top: 99.5px;
 }
 
 .c-btn-secondary{
@@ -233,9 +234,9 @@ button{
 /* NOTE: Articles */
 .c-art{
   box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 924px;
-  padding: 0 7.5%;
+  margin: 10px auto 30px;
+  max-width: 1024px;
+  padding: 0 10.5%;
 }
 
 .c-art--margin{
@@ -269,7 +270,7 @@ button{
 
 .c-aside {
   position: relative;
-  top: 66.5px;
+  top: 64px;
 }
 
 .f-aside{
@@ -305,6 +306,10 @@ button{
 .c-table{
   padding: 0 22.5px 32.5px 0;
 }
+
+.c-table h3{
+  font-size: 23px;
+}
 .c-table--pad{
   box-sizing: border-box;
   width: 100%;
@@ -314,11 +319,10 @@ button{
 }
 
 #monthlyPlans, tr, th, td{
-  border: thin solid black;
+  border: thin solid grey;
   border-collapse: collapse;
   font-family: 'Lora', serif;
-  font-weight: bold;
-  padding: 7.5px 10px;
+  padding: 10px 10px;
   white-space: nowrap;
 }
 
@@ -429,7 +433,8 @@ button{
 
 /* NOTE: Footer Copyright*/
 .c-copyR{
-  padding: 20px 2%;
+  margin 0 auto;
+  padding: 30.5px 2%;
 }
 .f-copyR{
   color: #F2F1E8;
@@ -437,5 +442,92 @@ button{
   text-align: left;
 }
 .s-copyR{
+  box-shadow: 0px -100px 214px 200px rgba(150,115,67,0.18);
   background-color: #2e302d;
+}
+
+
+/* NOTE: SCREEN CHANGES */
+@media screen and (max-width: 946px){
+  #first-row button:nth-child(1){
+    flex: 2.063;
+  }
+
+  #first-row button h3{
+    font-size: 14.75px;
+    padding: 10.5px 8px;
+  }
+
+  #second-row button:nth-child(3){
+    flex: 1;
+  }
+
+  #second-row button h3{
+    font-size: 14.75px;
+    padding: 10.5px 8px;
+  }
+
+}
+
+@media screen and (max-width: 766px){
+  #first-row button:nth-child(1){
+    min-width: 560px;;
+  }
+
+  .c-btn-secondary{
+    background-size: 140%;
+    min-width: 225px;
+    min-height: 235px;
+  }
+
+  .c-art--margin{
+    margin: 0;
+  }
+
+  #under-parallax{
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .c-aside{
+    top: 0px;
+  }
+
+  #aside--pot{
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 639px){
+  .c-sub-nav{
+    margin: 0 auto;
+    padding: 15px 10px;
+  }
+  .c-sub-nav a{
+    padding: 10px;
+  }
+
+  .c-pr--row{
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .c-btn-primary{
+    background-size: 100%;
+    min-width: 175px;
+    min-height: 165px;
+  }
+
+  #first-row button h3{
+    position: relative;
+      top: 45px;
+  }
+
+  .c-btn-secondary{
+    background-size: 100%;
+    min-width: 175px;
+    min-height: 165px;
+  }
+
 }
